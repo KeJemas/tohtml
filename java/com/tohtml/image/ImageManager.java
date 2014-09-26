@@ -96,9 +96,9 @@ public class ImageManager {
             int width = imd.getWidth();
             if (width > 1000) {
             	
-            	int scale = heigth / 1000;
-            	heigth = 1000;
-            	width = width / scale;
+            	int scale = width / 1000;
+                width = 1000;
+                heigth = heigth / scale;
             }
             
             html.append("<img src='" + imageName + "' width='" + width + "px' height='px" + heigth + "' border='0'/>").append("\r\n");

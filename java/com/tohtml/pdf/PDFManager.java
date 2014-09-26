@@ -101,12 +101,12 @@ public class PDFManager {
 					
 					int heigth = imd.getHeight();
 		            int width = imd.getWidth();
-		            if (width > 1000) {
-		            	
-		            	int scale = heigth / 1000;
-		            	heigth = 1000;
-		            	width = width / scale;
-		            }
+                    if (width > 1000) {
+
+                        int scale = width / 1000;
+                        width = 1000;
+                        heigth = heigth / scale;
+                    }
 		            
                     
                     html.append("<img src='" + imageName + "' width='" + width + "px' height='" + heigth + "px' border='0'/>").append("\r\n");
